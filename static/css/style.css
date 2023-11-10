@@ -1,0 +1,19 @@
+#header{
+    display: flex;
+    justify-content: center;
+}
+#checkerboard{
+    display: flex;
+    justify-content: center;
+}
+
+.sqr1{
+    height: 50px;
+    width: 50px;
+    border: 2px solid black;
+}
+.sqr2{
+    height: 50px;
+    width: 50px;
+    border: 2px solid black;
+}

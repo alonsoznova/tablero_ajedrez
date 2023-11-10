@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Checkerboard</title>
+</head>
+<body>
+    <div id="header" style="background-color: {{ clr1 }};">
+        <h1 style=" color: {{ clr2 }};">***Checkerboard***</h1>
+    </div>
+
+    <div id="checkerboard"></div>
+
+    <table id="checkerboard">
+            {% for i in range(num2): %}
+                <tr>
+                    {% for k in range(num1): %}
+                        {% if (k+i) % 2 == 0 %}
+                            <td class="sqr1" style="background-color: {{ clr1 }};"></td>
+                        {% else %}
+                            <td class="sqr2" style="background-color: {{ clr2 }};"></td>
+                        {% endif %}
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+    </table>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
